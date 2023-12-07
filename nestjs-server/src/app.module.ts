@@ -8,16 +8,22 @@ import { MulterModule } from '@nestjs/platform-express';
 import { ImageController } from './image.controller';
 import { CloudinaryService } from './cloudinary.service';
 
+const DB_HOST = process.env.DB_HOST;
+const DB_PORT = process.env.DB_PORT;
+const DB_DATABASE = process.env.DB_DATABASE;
+const DB_USERNAME = process.env.DB_USERNAME;
+const DB_PASSWORD = process.env.DB_PASSWORD;
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'dbg',
+      host: DB_HOST,
       port: 5432,
-      username: 'x',
-      password: 'x',
+      username: DB_USERNAME,
+      password: DB_PASSWORD,
       entities: [Project],
-      database: 'x',
+      database: DB_DATABASE,
       synchronize: true,
       ssl: true,
     }),

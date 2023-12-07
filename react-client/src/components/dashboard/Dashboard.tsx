@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { GrClose } from "react-icons/gr";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoOpenOutline } from "react-icons/io5";

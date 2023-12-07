@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import { AdminPanel } from "./pages/AdminPanel";
 
 export default function App() {
-
   const userState = {
     userId: 0
   }

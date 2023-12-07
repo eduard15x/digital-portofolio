@@ -2,7 +2,6 @@ import { FaPhone } from "react-icons/fa6";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
 
-
 export const Contact = () => {
     return (
         <div className="contact" id="contact">
