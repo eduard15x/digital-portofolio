@@ -1,0 +1,59 @@
+.carousel {
+    position: absolute;
+    z-index: 9;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 320px;
+        max-width: 500px;
+        margin: auto;
+        color: orange;
+        font-size: 30px;
+        margin-bottom: 50px;
+        padding: 0px 16px;
+
+        &__firstTitle {
+            font-size: 50px;
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 1px;
+            -webkit-text-stroke-color: rgb(179, 179, 179);
+        }
+
+        &__secondTitle {
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(221, 221, 221);
+        }
+
+        &__description {
+            color: rgb(224, 224, 224);
+            font-size: 16px;
+            margin-top: 16px;
+        }
+
+        &__btn-redirect {
+            background: rgb(255,192,0);
+            background: linear-gradient(90deg, rgba(255,175,0,1) 5%, rgba(253,145,29,1) 46%, rgba(224,124,46,1) 100%);
+            width: 200px;
+            margin: auto;
+            margin-top: 32px;
+            border: none;
+            border-radius: 20rem;
+            margin-bottom: 8px;
+            padding: 14px 20px;
+            color: #ffffff;
+            font-size: 18px;
+
+            &:hover {
+                filter: brightness(0.85);
+                cursor: pointer;
+            }
+        }
+    }
+}

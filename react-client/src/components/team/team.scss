@@ -1,0 +1,79 @@
+.team {
+    background: radial-gradient(circle, rgba(6,6,6,1) 27%, rgba(3,3,4,1) 70%);
+    min-height: 100vh;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px 1rem;
+
+        @include breakpoint(tabletSmall) {
+            padding: 0px 2rem;
+        }
+
+        @include breakpoint(desktopSmall) {
+            padding: 0px 4rem;
+        }
+
+        .person {
+            margin: 0px 8px;
+            margin-bottom: 60px;
+            position: relative;
+
+            @include breakpoint(mobileCustom) {
+                margin-bottom: 80px;
+            }
+
+            @include breakpoint(tabletSmall) {
+                margin: 0px 16px;
+                margin-bottom: 100px;
+            }
+
+            &__img {
+                width: 260px;
+                height: 100%;
+                filter: brightness(1.1);
+
+                @include breakpoint(mobileCustom) {
+                    width: 300px;
+                }
+
+                @include breakpoint(desktop) {
+                    width: 380px;
+                }
+            }
+
+            .hovering {
+                filter: grayscale(100%);
+                background: radial-gradient(circle, rgb(29, 28, 28) 27%, rgb(19, 19, 20) 70%);
+                color: rgb(216, 216, 216);
+            }
+
+            &__info {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 220px;
+                padding: 12px 12px;
+                line-height: 125%;
+                font-size: 16px;
+                margin-top: -40px;
+                color: black;
+                background: linear-gradient(90deg, rgba(255,175,0,1) 5%, rgba(253,145,29,1) 46%, rgba(224,124,46,1) 100%);
+
+                @include breakpoint(mobileCustom) {
+                    width: 260px;
+                    margin-top: -50px;
+                    padding: 20px 12px;
+                    line-height: 150%;
+                    font-size: 18px;
+                }
+
+                @include breakpoint(desktop) {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

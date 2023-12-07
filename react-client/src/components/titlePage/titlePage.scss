@@ -1,0 +1,48 @@
+.title-comp {
+    min-width: 320px;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 30px;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        padding-top: 70px;
+    }
+
+    &__subtitle {
+        color: orange;
+        font-size: 16px;
+        text-transform: lowercase;
+
+        @include breakpoint(mobile) {
+            font-size: 20px;
+        }
+    }
+
+    &__title {
+        color: white;
+        font-weight: bold;
+        font-size: 28px;
+        padding-top: 6px;
+        text-transform: capitalize;
+
+        @include breakpoint(mobile) {
+            font-size: 40px;
+        }
+    }
+
+    &__border {
+        width: 200px;
+        margin: 12px auto;
+        margin-bottom: 30px;
+        background-color: orange;
+        height: 1px;
+        border: 0;
+
+        @include breakpoint(mobile) {
+            width: 220px;
+            margin: 20px auto;
+            margin-bottom: 40px;
+        }
+    }
+}

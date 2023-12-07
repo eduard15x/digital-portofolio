@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle, rgba(8,8,8,1) 27%, rgba(5,5,6,1) 70%);
+}
+
+@import './styles/mixins.scss';
+@import './components/coverBG/coverBG.scss';
+@import './components/nav/nav.scss';
+@import './components/carousel/carouselBanner.scss';
+@import './components/titlePage/titlePage.scss';
+@import './components/services//services.scss';
+@import './components/team/team.scss';
+@import './components/projects/projects.scss';
+@import './components/contact/contact.scss';
+@import './components/footer/footer.scss';
+@import './components/errorPage/errorPage.scss';
+@import './components/dashboard/dashboard.scss';

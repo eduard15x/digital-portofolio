@@ -1,0 +1,86 @@
+.services {
+    min-height: 100vh;
+
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(80%, 1fr));
+        padding: 0px 16px;
+        margin-bottom: 16px;
+
+        @include breakpoint(mobileCustom) {
+            grid-template-columns: repeat(auto-fill,minmax(50%, 1fr));
+        }
+
+        @include breakpoint(tabletSmall) {
+            grid-template-columns: repeat(auto-fill,minmax(33%, 1fr));
+            padding: 0px 3rem;
+            margin-bottom: 32px;
+        }
+        
+        @include breakpoint(desktopSmall) {
+            padding: 0px 6rem;
+            margin-bottom: 64px;
+        }
+
+        &__container {
+            background-color: rgb(20, 20, 20);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 8px;
+            padding: 16px 16px;
+
+            @include breakpoint(tabletSmall) {
+                margin: 16px;
+                padding: 40px 20px;
+            }
+
+            &:hover {
+                filter: brightness(1.25);
+            }
+
+            .service-logo {
+                width: 50px;
+                height: 50px;
+                filter: brightness(0.75);
+                
+                @include breakpoint(tabletSmall) {
+                    width: 75px;
+                    height: 75px;
+                }
+                
+                @include breakpoint(desktopSmall) {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .service-title {
+                color: rgb(209, 209, 209);
+                padding: 16px 8px;
+                text-align: center;
+
+                @include breakpoint(tabletSmall) {
+                    padding: 16px 16px;
+                }
+            }
+
+            .service-description {
+                color: rgb(192, 192, 192);
+                text-align: justify;
+                font-size: 12px;
+                line-height: 150%;
+                
+                @include breakpoint(tabletSmall) {
+                    font-size: 14px;
+                }
+                
+                @include breakpoint(desktopSmall) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,476 @@
+.dashboard {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    
+    @include breakpoint(tabletSmall) {
+        flex-direction: row;
+        padding: 0 2rem;
+    }
+    
+    @include breakpoint(desktopSmall) {
+        padding: 0 4rem;
+    }
+
+    h2 {
+        padding: 20px 0px;
+        font-size: 20px;
+        
+        @include breakpoint(tabletSmall) {
+            padding: 30px 0px;
+            font-size: 30px;
+        }
+    }
+
+    &__projects {
+        width: 100%;
+        padding-right: 0;
+        
+        @include breakpoint(tabletSmall) {
+            width: 70%;
+            padding-right: 5%;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            max-height: 60vh;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: rgb(38, 38, 43);
+                border-radius: 20px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgb(139, 139, 139);
+                border-radius: 20px;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid rgb(95, 95, 95);
+                margin-bottom: 16px;
+                padding-right: 0px;
+                padding-bottom: 16px;
+                
+                @include breakpoint(tabletSmall) {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 16px;
+                    padding-right: 16px;
+                    padding-bottom: 16px;
+                }
+
+                &:last-child {
+                        margin-bottom: 0px;
+                }
+
+                .proj-img {
+                    width: auto;
+                    max-width: 240px;
+                    min-width: 180px;
+                    height: auto;
+                    max-height: 200px;
+                    border: 1px solid rgb(199, 199, 199);
+                    margin: auto;
+                    
+                    @include breakpoint(tabletSmall) {
+                        width: 20%;
+                    }
+                }
+
+                .proj-data {
+                    padding: 8px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    @include breakpoint(tabletSmall) {
+                        padding: 12px 16px;
+                        width: 60%;
+                    }
+
+                    .name {
+                        font-size: 18px;
+                        padding-bottom: 10px;
+                        padding-top: 10px;
+                        font-weight: bold;
+                        text-align: center;
+                        
+                        @include breakpoint(tabletSmall) {
+                            font-size: 22px;
+                            padding-bottom: 14px;
+                            padding-top: 0px;
+                            text-align: start;
+                        }
+                    }
+
+                    .description {
+                        font-size: 14px;
+                        line-height: 130%;
+                        
+                        @include breakpoint(tabletSmall) {
+                            font-size: 16px;
+                            line-height: 150%;
+                        }
+                    }
+                }
+                .proj-controls {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    @include breakpoint(tabletSmall) {
+                        width: 20%;
+                        flex-direction: column;
+                        align-items: flex-end;
+                    }
+
+                    button {
+                        width: 35px;
+                        height: 35px;
+                        border: none;
+                        text-align: center;
+                        padding: 8px;
+                        border-radius: 5px;
+                        color: white;
+                        font-size: 16px;
+                        margin: 0px 14px;
+
+                        @include breakpoint(tabletSmall) {
+                            width: 60px;
+                            height: 60px;
+                            text-align: center;
+                            padding: 8px 20px;
+                            font-size: 22px;
+                            margin: 0px;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                            filter: brightness(0.85);
+                        }
+                    }
+
+                    .update {
+                        background-color: rgb(9, 110, 9);
+                    }
+                    .delete {
+                        margin: 0;
+                        background-color: rgb(204, 15, 15);
+                    
+                        @include breakpoint(tabletSmall) {
+                            margin: 14px 0;
+                        }
+                    }
+                    .navigate {
+                        background-color: chocolate;
+
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__add-form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-bottom: 60px;
+        
+        @include breakpoint(tabletSmall) {
+            width: 30%;
+            margin-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        input {
+            width: 100%;
+            border: 0px;
+            background-color: rgb(38, 38, 43);
+            padding: 8px;
+            font-size: 12px;
+            margin-bottom: 12px;
+            color: rgb(204, 204, 204);
+
+            &::placeholder {
+                color: rgb(204, 204, 204);
+            }
+
+            &:hover {
+                filter: brightness(1.2);
+            }
+
+            &:focus {
+                outline-color: orange;
+                outline-width: 2px;
+                outline-style: solid;
+            }
+            
+            @include breakpoint(tabletSmall) {
+                width: 100%;
+                padding: 16px 10px;
+                font-size: 14px;
+                margin-bottom: 14px;
+            }
+        }
+
+        textarea {
+            color: rgb(204, 204, 204);
+            padding: 8px;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 100px;
+            max-height: 100px;
+            background-color: rgb(38, 38, 43);
+            border: none;
+            font-size: 12px;
+
+            &::placeholder {
+                color: rgb(204, 204, 204);
+            }
+
+            &:hover {
+                filter: brightness(1.2);
+            }
+
+            &:active,
+            &:focus {
+                outline-color: orange;
+                outline-width: 2px;
+                outline-style: solid;
+            }
+            
+            @include breakpoint(tabletSmall) {
+                padding: 10px;
+                min-height: 140px;
+                max-height: 140px;
+                font-size: 14px;
+            }
+        }
+
+        .btn {
+            width: 160px;
+            border: none;
+            background-color: chocolate;
+            padding: 10px;
+            border-radius: 4px;
+            color: white;
+            margin-top: 20px;
+            font-size: 14px;
+
+            &:hover {
+                cursor: pointer;
+                filter: brightness(1.15);
+            }
+
+            &:active {
+                @include breakpoint(tabletSmall) {
+                    margin-top: 21px;
+                    margin-left: 1px;
+                }
+            }
+
+            @include breakpoint(tabletSmall) {
+                width: 200px;
+                padding: 16px;
+                font-size: 16px;
+            }
+        }
+
+        .btn-disabled {
+            filter: brightness(0.5);
+
+            &:hover {
+                cursor: default;
+                filter: brightness(0.5);
+            }
+
+            &:active {
+                margin-top: 20px;
+                margin-left: 0px;
+            }
+        }
+    }
+
+    &__modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .update-form {
+            position: absolute;
+            width: 100%;
+            height: 460px;
+            border: 1px solid rgb(70, 70, 70);
+            background: radial-gradient(circle, rgba(8,8,8,1) 27%, rgba(5,5,6,1) 70%);
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+            @include breakpoint(tabletSmall) {
+                width: 600px;
+                height: 600px;
+                padding: 14px;
+                display: flex;
+            }
+
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                width: 26px;
+                height: 26px;
+                
+                @include breakpoint(tabletSmall) {
+                    font-size: 24px;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(1.2);
+                }
+
+                &:active {
+                    top: 11px;
+                    right: 9px;
+                }
+            }
+
+            h3 {
+                font-size: 20px;
+                color: rgb(204, 204, 204);
+                padding-bottom: 24px;
+
+                @include breakpoint(tabletSmall) {
+                    font-size: 26px;
+                }
+            }
+
+            input {
+                width: 100%;
+                border: 0px;
+                background-color: rgb(38, 38, 43);
+                padding: 8px;
+                font-size: 12px;
+                margin-bottom: 16px;
+                color: rgb(204, 204, 204);
+                
+                @include breakpoint(tabletSmall) {
+                    padding: 16px 10px;
+                    font-size: 14px;
+                }
+
+                &::placeholder {
+                    color: rgb(204, 204, 204);
+                }
+
+                &:hover {
+                    filter: brightness(1.2);
+                }
+
+                &:focus {
+                    outline-color: orange;
+                    outline-width: 2px;
+                    outline-style: solid;
+                }
+            }
+
+            textarea {
+                color: rgb(204, 204, 204);
+                padding: 8px;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 100px;
+                max-height: 100px;
+                background-color: rgb(38, 38, 43);
+                border: none;
+                font-size: 12px;
+                
+                @include breakpoint(tabletSmall) {
+                    padding: 10px;
+                    min-height: 140px;
+                    max-height: 140px;
+                    font-size: 14px;
+                }
+    
+                &::placeholder {
+                    color: rgb(204, 204, 204);
+                }
+    
+                &:hover {
+                    filter: brightness(1.2);
+                }
+    
+                &:active,
+                &:focus {
+                    outline-color: orange;
+                    outline-width: 2px;
+                    outline-style: solid;
+                }
+            }
+    
+            .btn {
+                width: 160px;
+                border: none;
+                background-color: chocolate;
+                padding: 12px;
+                border-radius: 4px;
+                color: white;
+                margin: 0 auto;
+                margin-top: 24px;
+                font-size: 14px;
+                
+                @include breakpoint(tabletSmall) {
+                    width: 200px;
+                    padding: 16px 32px;
+                    font-size: 16px;
+                }
+    
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(1.15);
+                }
+            }
+    
+            .btn-disabled {
+                filter: brightness(0.5);
+    
+                &:hover {
+                    cursor: default;
+                    filter: brightness(0.5);
+                }
+            }
+        }
+    }
+
+    .modal-hide {
+        display: none;
+    }
+}
