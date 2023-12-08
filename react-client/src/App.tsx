@@ -7,7 +7,6 @@ export default function App() {
   const userState = {
     userId: 0
   }
-
   const HomepageLayout = () => {
     return (
       <div>

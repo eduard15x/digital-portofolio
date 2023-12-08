@@ -4,7 +4,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoOpenOutline } from "react-icons/io5";
 import { CiEdit } from "react-icons/ci";
 import { Link } from "react-router-dom";
-
+const SERVER_API = import.meta.env.VITE_SERVER_API;
 export interface Project {
     id: number;
     projectName: string;
@@ -45,7 +45,7 @@ export const Dashboard: React.FC = () => {
     // CRUD OPERATIONS
     const getAllProjects = async () => {
         try {
-            const response  = await fetch('http://localhost:3000/project/list', {
+            const response  = await fetch(SERVER_API + '/project/list', {
                 method: 'GET',
             })
 
@@ -78,7 +78,7 @@ export const Dashboard: React.FC = () => {
             }
 
             newProject.projectImageLink = responseUploadImage.secure_url;
-            const response = await fetch('http://localhost:3000/project', {
+            const response = await fetch(SERVER_API + '/project', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(newProject)
@@ -103,7 +103,7 @@ export const Dashboard: React.FC = () => {
 
         try {
             setIsLoading(true);
-            const response = await fetch('http://localhost:3000/project/' + projectId, {
+            const response = await fetch(SERVER_API + '/project/' + projectId, {
                 method: 'PATCH',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(updatedProject)
@@ -127,7 +127,7 @@ export const Dashboard: React.FC = () => {
         const projectId = e.currentTarget.dataset.projectId;
         try {
             setIsLoading(true);
-            await fetch('http://localhost:3000/project/' + projectId, {
+            await fetch(SERVER_API + '/project/' + projectId, {
                 method: 'DELETE',
             });
 
@@ -162,7 +162,7 @@ export const Dashboard: React.FC = () => {
             const formData = new FormData();
             formData.append('image', file);
 
-            const response = await fetch('http://localhost:3000/images/upload', {
+            const response = await fetch(SERVER_API + '/images/upload', {
                 method: 'POST',
                 body: formData,
             });

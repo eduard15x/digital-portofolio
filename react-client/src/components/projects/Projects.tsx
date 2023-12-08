@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import TitlePage from "../titlePage/TitlePage";
 import { IoOpenOutline } from "react-icons/io5";
 import { Project } from "../dashboard/Dashboard";
+const SERVER_API = import.meta.env.VITE_SERVER_API;
 
 export const Projects: React.FC = () => {
     const [projects, setProjects] = useState<Project[] | []>([]);
 
     const getAllProjects = async () => {
         try {
-            const response  = await fetch('http://localhost:3000/project/list', {
+            const response  = await fetch(SERVER_API + '/project/list', {
                 method: 'GET',
             })
 
