@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: column;
     padding: 0 1rem;
-    
+
     @include breakpoint(tabletSmall) {
         flex-direction: row;
         padding: 0 2rem;
     }
-    
+
     @include breakpoint(desktopSmall) {
         padding: 0 4rem;
     }
@@ -16,7 +16,7 @@
     h2 {
         padding: 20px 0px;
         font-size: 20px;
-        
+
         @include breakpoint(tabletSmall) {
             padding: 30px 0px;
             font-size: 30px;
@@ -26,7 +26,7 @@
     &__projects {
         width: 100%;
         padding-right: 0;
-        
+
         @include breakpoint(tabletSmall) {
             width: 70%;
             padding-right: 5%;
@@ -59,7 +59,7 @@
                 margin-bottom: 16px;
                 padding-right: 0px;
                 padding-bottom: 16px;
-                
+
                 @include breakpoint(tabletSmall) {
                     display: flex;
                     flex-direction: row;
@@ -80,7 +80,7 @@
                     max-height: 200px;
                     border: 1px solid rgb(199, 199, 199);
                     margin: auto;
-                    
+
                     @include breakpoint(tabletSmall) {
                         width: 20%;
                     }
@@ -91,7 +91,7 @@
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    
+
                     @include breakpoint(tabletSmall) {
                         padding: 12px 16px;
                         width: 60%;
@@ -103,7 +103,7 @@
                         padding-top: 10px;
                         font-weight: bold;
                         text-align: center;
-                        
+
                         @include breakpoint(tabletSmall) {
                             font-size: 22px;
                             padding-bottom: 14px;
@@ -115,7 +115,7 @@
                     .description {
                         font-size: 14px;
                         line-height: 130%;
-                        
+
                         @include breakpoint(tabletSmall) {
                             font-size: 16px;
                             line-height: 150%;
@@ -127,7 +127,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    
+
                     @include breakpoint(tabletSmall) {
                         width: 20%;
                         flex-direction: column;
@@ -166,7 +166,7 @@
                     .delete {
                         margin: 0;
                         background-color: rgb(204, 15, 15);
-                    
+
                         @include breakpoint(tabletSmall) {
                             margin: 14px 0;
                         }
@@ -190,7 +190,7 @@
         justify-content: space-between;
         margin-top: 30px;
         padding-bottom: 60px;
-        
+
         @include breakpoint(tabletSmall) {
             width: 30%;
             margin-top: 0px;
@@ -219,7 +219,7 @@
                 outline-width: 2px;
                 outline-style: solid;
             }
-            
+
             @include breakpoint(tabletSmall) {
                 width: 100%;
                 padding: 16px 10px;
@@ -253,7 +253,7 @@
                 outline-width: 2px;
                 outline-style: solid;
             }
-            
+
             @include breakpoint(tabletSmall) {
                 padding: 10px;
                 min-height: 140px;
@@ -327,7 +327,7 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            
+
             @include breakpoint(tabletSmall) {
                 width: 600px;
                 height: 600px;
@@ -345,7 +345,7 @@
                 font-size: 20px;
                 width: 26px;
                 height: 26px;
-                
+
                 @include breakpoint(tabletSmall) {
                     font-size: 24px;
                     width: 30px;
@@ -381,7 +381,7 @@
                 font-size: 12px;
                 margin-bottom: 16px;
                 color: rgb(204, 204, 204);
-                
+
                 @include breakpoint(tabletSmall) {
                     padding: 16px 10px;
                     font-size: 14px;
@@ -412,22 +412,22 @@
                 background-color: rgb(38, 38, 43);
                 border: none;
                 font-size: 12px;
-                
+
                 @include breakpoint(tabletSmall) {
                     padding: 10px;
                     min-height: 140px;
                     max-height: 140px;
                     font-size: 14px;
                 }
-    
+
                 &::placeholder {
                     color: rgb(204, 204, 204);
                 }
-    
+
                 &:hover {
                     filter: brightness(1.2);
                 }
-    
+
                 &:active,
                 &:focus {
                     outline-color: orange;
@@ -435,7 +435,7 @@
                     outline-style: solid;
                 }
             }
-    
+
             .btn {
                 width: 160px;
                 border: none;
@@ -446,22 +446,22 @@
                 margin: 0 auto;
                 margin-top: 24px;
                 font-size: 14px;
-                
+
                 @include breakpoint(tabletSmall) {
                     width: 200px;
                     padding: 16px 32px;
                     font-size: 16px;
                 }
-    
+
                 &:hover {
                     cursor: pointer;
                     filter: brightness(1.15);
                 }
             }
-    
+
             .btn-disabled {
                 filter: brightness(0.5);
-    
+
                 &:hover {
                     cursor: default;
                     filter: brightness(0.5);

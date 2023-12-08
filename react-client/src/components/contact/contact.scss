@@ -30,7 +30,7 @@
         flex-direction: column;
         margin: 0px auto;
         padding: 0px 16px;
-        
+
         @include breakpoint(tabletSmall) {
             width: 50%;
             margin: 0px 30px;
@@ -41,7 +41,7 @@
             &--title {
                 font-size: 20px;
                 padding-bottom: 20px;
-                
+
                 @include breakpoint(tabletSmall) {
                     font-size: 32px;
                 }
@@ -104,7 +104,7 @@
 
         .program {
             margin-top: 30px;
-            
+
             @include breakpoint(tabletSmall) {
                 margin-top: 40px;
             }
@@ -112,7 +112,7 @@
             &--title {
                 font-size: 20px;
                 padding-bottom: 16px;
-                
+
                 @include breakpoint(tabletSmall) {
                     font-size: 32px;
                     padding-bottom: 20px;
@@ -120,7 +120,6 @@
             }
 
             &__schedule {
-
                 div {
                     margin: 10px 0px;
                     display: flex;
@@ -168,7 +167,7 @@
         &--title {
             font-size: 20px;
             padding-bottom: 20px;
-            
+
             @include breakpoint(tabletSmall) {
                 font-size: 32px;
                 padding-bottom: 20px;
@@ -266,7 +265,7 @@
             @include breakpoint(tabletSmall) {
                 padding: 12px;
                 margin-top: 24px;
-                
+
                 &:active {
                     margin-top: 25px;
                     margin-left: 1px;

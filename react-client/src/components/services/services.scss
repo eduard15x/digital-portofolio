@@ -16,7 +16,7 @@
             padding: 0px 3rem;
             margin-bottom: 32px;
         }
-        
+
         @include breakpoint(desktopSmall) {
             padding: 0px 6rem;
             margin-bottom: 64px;
@@ -43,12 +43,12 @@
                 width: 50px;
                 height: 50px;
                 filter: brightness(0.75);
-                
+
                 @include breakpoint(tabletSmall) {
                     width: 75px;
                     height: 75px;
                 }
-                
+
                 @include breakpoint(desktopSmall) {
                     width: 100px;
                     height: 100px;
@@ -70,17 +70,15 @@
                 text-align: justify;
                 font-size: 12px;
                 line-height: 150%;
-                
+
                 @include breakpoint(tabletSmall) {
                     font-size: 14px;
                 }
-                
+
                 @include breakpoint(desktopSmall) {
                     font-size: 16px;
                 }
             }
         }
     }
-
-
 }

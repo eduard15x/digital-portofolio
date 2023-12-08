@@ -2,9 +2,9 @@ import CarouselBanner from "../components/carousel/CarouselBanner";
 import { Contact } from "../components/contact/Contact";
 import { CoverBG } from "../components/coverBG/CoverBG";
 import { Footer } from "../components/footer/Footer";
-import Nav from "../components/nav/Nav";
+import { Nav } from "../components/nav/Nav";
 import { Projects } from "../components/projects/Projects";
-import Services from "../components/services/Services";
+import { Services } from "../components/services/Services";
 import { Team } from "../components/team/Team";
 
 export default function Home() {

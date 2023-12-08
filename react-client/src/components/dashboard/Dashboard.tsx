@@ -251,7 +251,7 @@ export const Dashboard: React.FC = () => {
                                 </div>
                             </div>
                         ))
-                        : 'no projects'
+                        : 'No projects available. Please create a new project do be displayed in the list.'
                     }
                 </div>
             </div>

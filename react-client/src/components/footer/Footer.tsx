@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram} from "react-icons/fa";
 import { FaFacebookMessenger } from "react-icons/fa6";
 import { SiSendinblue } from "react-icons/si";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
         <div className="footer">
             <div className="footer__company">

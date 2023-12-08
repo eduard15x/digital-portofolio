@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TitlePage from "../titlePage/TitlePage";
 
-export const Team = () => {
+export const Team: React.FC = () => {
     return (
         <div className="team" id="team">
             <TitlePage subtitle="who we are" title="Meet Team" />

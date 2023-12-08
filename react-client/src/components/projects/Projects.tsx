@@ -4,7 +4,7 @@ import TitlePage from "../titlePage/TitlePage";
 import { IoOpenOutline } from "react-icons/io5";
 import { Project } from "../dashboard/Dashboard";
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
     const [projects, setProjects] = useState<Project[] | []>([]);
 
     const getAllProjects = async () => {
@@ -31,12 +31,8 @@ export const Projects = () => {
 
     return (
         <div className="projects" id="projects">
-
-
             <TitlePage subtitle="check our work" title="Projects" />
-
             <div className="projects__list">
-
                 {
                     projects.length > 0
                     ? projects
@@ -50,12 +46,13 @@ export const Projects = () => {
                             description={proj.projectDescription}
                         />
                     ))
-                    : <div></div>
-
+                    : <div className="empty-list">
+                        No projects available <br />
+                        You can upload a new project at the following page:
+                        <Link to='admin' target="_blank" title="Navigate to admin panel">PANEL</Link>
+                    </div>
                 }
-
             </div>
-
         </div>
     );
 }

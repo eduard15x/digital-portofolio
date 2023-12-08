@@ -1,6 +1,6 @@
 import Logo from '../../assets/Logo-Dark.png';
 
-export default function Nav() {
+export const Nav: React.FC = () => {
   return (
     <div className="nav">
         <div className="nav__logo">
@@ -23,11 +23,11 @@ export default function Nav() {
           </label>
 
           <ul className="menu__box">
-            <li><a className="menu__item" href="#">Home</a></li>
-            <li><a className="menu__item" href="#">Services</a></li>
-            <li><a className="menu__item" href="#">Team</a></li>
-            <li><a className="menu__item" href="#">Projects</a></li>
-            <li><a className="menu__item" href="#">Contact</a></li>
+            <li><a className="menu__item" href="#home">Home</a></li>
+            <li><a className="menu__item" href="#services">Services</a></li>
+            <li><a className="menu__item" href="#team">Team</a></li>
+            <li><a className="menu__item" href="#projects">Projects</a></li>
+            <li><a className="menu__item" href="#contact">Contact</a></li>
           </ul>
         </div>
     </div>

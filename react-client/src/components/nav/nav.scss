@@ -6,12 +6,8 @@
     display: flex;
     align-items: center;
     padding: 6px 0px;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.75);
     z-index: 10;
-
-    @include breakpoint(mobileSmallCustom) {
-        // display: none;
-    }
 
     &__logo {
         width: 35%;
@@ -19,6 +15,7 @@
         justify-content: center;
         align-items: center;
         color: white;
+        padding-left: 30px;
 
         img {
             width: 45px;
@@ -27,13 +24,21 @@
             border-radius: 50%;
             filter: brightness(1.2);
         }
+
+        p {
+            font-size: 16px;
+            font-weight: bold;
+            color: transparent;
+            -webkit-text-stroke: 1px;
+            -webkit-text-stroke-color: rgb(209, 209, 209);
+        }
     }
 
     &__link-list {
         width: 65%;
         display: none;
         justify-content: center;
-        
+
         @include breakpoint(tablet) {
             display: flex;
         }
@@ -47,10 +52,6 @@
                 color: orange;
                 cursor: pointer;
             }
-
-            // &--active {
-            //     color: orange;
-            // }
         }
     }
 

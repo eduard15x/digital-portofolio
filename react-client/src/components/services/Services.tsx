@@ -3,7 +3,7 @@ import DigitalStrategySVG from '../../assets/digitalStrategy.svg';
 import WebDevelopmentSVG from '../../assets/webDevelopment.svg';
 import SocialMediaSVG from '../../assets/socialMedia.svg';
 
-export default function Services() {
+export const Services: React.FC = () => {
     return (
         <div className="services" id="services">
             <TitlePage subtitle="What we do" title="Our Services" />
@@ -37,7 +37,6 @@ export default function Services() {
         </div>
     );
 }
-
 
 interface ServiceProps {
     svg: string;
