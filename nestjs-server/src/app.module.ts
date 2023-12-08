@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -8,22 +9,17 @@ import { MulterModule } from '@nestjs/platform-express';
 import { ImageController } from './image.controller';
 import { CloudinaryService } from './cloudinary.service';
 
-const DB_HOST = process.env.DB_HOST;
-const DB_PORT = process.env.DB_PORT;
-const DB_DATABASE = process.env.DB_DATABASE;
-const DB_USERNAME = process.env.DB_USERNAME;
-const DB_PASSWORD = process.env.DB_PASSWORD;
-
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: DB_HOST,
-      port: 5432,
-      username: DB_USERNAME,
-      password: DB_PASSWORD,
+      host: String(process.env.DB_HOST),
+      port: Number(process.env.DB_PORT),
+      username: String(process.env.DB_USERNAME),
+      password: String(process.env.DB_PASSWORD),
       entities: [Project],
-      database: DB_DATABASE,
+      database: String(process.env.DB_DATABASE),
       synchronize: true,
       ssl: true,
     }),
