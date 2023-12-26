@@ -51,3 +51,7 @@ Create a new instance on [Cloudinary](https://cloudinary.com/) and get data from
 **CLOUD_NAME**\
 **CLOUD_KEY**\
 **CLOUD_SECRET**
+
+
+![Screenshot 2023-12-26 at 14 31 34](https://github.com/eduard15x/digital-portofolio/assets/89576994/bab799f0-376a-45c6-b2c6-48f827ef2fd5)
+
